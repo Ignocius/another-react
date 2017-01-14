@@ -7,5 +7,25 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <ul id="ul" />
+    <input id="input" autocomplete="off" />
+    <button id="button">Button</button>
+
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script>
+    var socket = io.connect(document.location.protocol+'//'+document.location.hostname+':3001');
+    $('#button').click(function() {
+      socket.emit('sendevent', $('#input').val());
+      $('#input').val('');
+      return false;
+    });
+    socket.on('receive', function(msg){
+      $('#ul').append($('<li>').html(msg));
+    });
+    </script>
+
+
   </body>
 </html>
