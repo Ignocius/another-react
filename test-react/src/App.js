@@ -9,8 +9,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <article>
-          <h1>React All the ToDos</h1>
+        <article className="todo-wrapper">
+          <article className="">
+            <section className="title">
+              <h1>React All the ToDos</h1>
+            </section>
+            <aside className="todo-data-input">
+              <input type="text" name="todo-input" />
+              <button />
+            </aside>
+          </article>
         </article>
       </div>
     );
