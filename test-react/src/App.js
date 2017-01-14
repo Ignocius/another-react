@@ -18,6 +18,14 @@ class App extends Component {
               <input type="text" name="todo-input" />
               <button />
             </aside>
+            <section className="todo-items-wrapper">
+              <ul>
+                <li>Test1</li>
+                <li>Test2</li>
+                <li>Test3</li>
+                <li>Test4</li>
+              </ul>
+            </section>
           </article>
         </article>
       </div>
