@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Cica from './testComponent.js';
+import TodoItemsRender from './todoItemsRender.js';
+// import Cica from './testComponent.js';
 
 // console.log("123");
 
@@ -19,12 +20,13 @@ class App extends Component {
               <button />
             </aside>
             <section className="todo-items-wrapper">
-              <ul>
+              <TodoItemsRender />
+              {/* <ul>
                 <li>Test1</li>
                 <li>Test2</li>
                 <li>Test3</li>
                 <li>Test4</li>
-              </ul>
+              </ul> */}
             </section>
           </article>
         </article>
